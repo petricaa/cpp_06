@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <limits>
+#include <climits>
 #include <cstdlib>
 #include <cctype>
 #include <cmath>
@@ -154,13 +155,12 @@ bool ScalarConverter::isDouble(const std::string &literal)
     return true;
 }
 
-// Konstruktor, kopija, destruktor i operator=
 ScalarConverter::ScalarConverter() {}
 ScalarConverter::ScalarConverter(const ScalarConverter &copy) { (void)copy; }
 ScalarConverter &ScalarConverter::operator=(const ScalarConverter &copy) { (void)copy; return *this; }
 ScalarConverter::~ScalarConverter() {}
 
-// Glavna funkcija za konverziju
+
 void ScalarConverter::convert(const std::string &literal)
 {
     if (isPseudoLiteral(literal))
